@@ -9,7 +9,7 @@
                 <hr>
                 <a href="/">HOME</a><br />
 		        <a href="/barcode/12345678">Test Link without pic2shop</a><br />
-                <a href="pic2shop://scan?callback=/barcode/EAN">pic2shop</a>
+                <a href="pic2shop://scan?callback=/barcode/%3FCODE%3DEAN">pic2shop</a>
                 <hr>
                 <span>@model.CODE</span>
             </div>
