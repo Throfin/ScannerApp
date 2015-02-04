@@ -1,0 +1,62 @@
+@html.extend('layout', function(model) {
+	@html.block("body", function (model) {
+		<div>
+			<div id="carousel" class="carousel slide" data-ride="carousel">
+			    <!-- Indicators -->
+			    <ol class="carousel-indicators">
+					<li data-target="#carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel" data-slide-to="1"></li>
+					<li data-target="#carousel" data-slide-to="2"></li>
+					<li data-target="#carousel" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active"><!-- class of active since it's the first item -->
+					  <img src="http://placehold.it/1200x315" alt="" />
+					  <div class="carousel-caption">
+						<p>Build your teams lists of stories.</p>
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="http://placehold.it/1200x315" alt="" />
+					  <div class="carousel-caption">
+						<p>Set up a story points session to plot out the stories.</p>
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="http://placehold.it/1200x315" alt="" />
+					  <div class="carousel-caption">
+						<p>Guide the discussion through each phase of the story points exercise, while allowing team members
+							  to collaborate from anywhere.</p>
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="http://placehold.it/1200x315" alt="" />
+					  <div class="carousel-caption">
+						<p>Push stories into sprints, set them aside in the backlog or mark them as epics to be split up later.</p>
+					  </div>
+					</div>
+				</div><!-- /.carousel-inner -->
+				<!--  Next and Previous controls below
+					href values must reference the id for this carousel -->
+					<a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+			</div>
+			<div id="optionsGrid"></div>
+		</div>
+		<hr class="half-rule">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2><a href="/projects">Start a Project</a></h2>
+				<p>Set up your project in order to add story cards, manage cards, assign team members, and start sessions.</p>
+			</div>
+			<div class="col-sm-4">
+				<h2><a href="/cards">Create Story Cards</a></h2>
+				<p>Add, edit, and delete story cards from past or for future sessions.</p>
+			</div>
+			<div class="col-sm-4">
+				<h2><a href="/sessions">Start a Session</a></h2>
+				<p>Create a session, invite users, and select stories to review.</p>
+			</div>
+		</div>
+	})
+})
