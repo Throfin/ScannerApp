@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //Map the routes
 //controllers.init(app);
 
+app.set('port', (process.env.PORT || 5000))
+
 app.get("/", function (req, res) {
     res.render("index", { CODE: "" } );
 });
@@ -30,4 +32,7 @@ app.get("/barcode/:CODE?", function(req, res) {
 app.use(express.static(__dirname, "/public"));
 
 var server = http.createServer(app);
-server.listen(5000, function() {console.log('listening on port 3000...');});
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
