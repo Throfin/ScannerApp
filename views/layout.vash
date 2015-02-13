@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Story Points</title>
-		<link rel="stylesheet" type="text/css" href="/public/dist/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/public/dist/css/site.css">
+		<title>BarcodeApp</title>
+		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
 		@html.block("styles")
 	</head>
 	<body>
-		<div  id="content" class="container-fluid">@html.block("body")</div>
+		<div id="content" class="container-fluid">
+            @html.block("body")
+        </div>
 	</body>
 	@html.block("scripts")
 </html>

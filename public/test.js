@@ -6,7 +6,7 @@
     var app = angular.module('testApp', []);
     
     app.controller('barcode', ['$scope', function($scope) {
-        $scope.testvar = 'Also working';
+        $scope.testvar = '1';
         $scope.barcode = '';
         
         $scope.trybarcode = function () {
