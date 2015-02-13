@@ -14,25 +14,24 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //Map the routes
 //controllers.init(app);
 
-app.set('port', (process.env.PORT || 5000))
-
-app.get("/", function (req, res) {
-    res.render("index", { CODE: "" } );
+app.get("/", function (req, res) {	
+    res.render("index", { CODE: "" } );			
 });
 
-app.get("/barcode/:CODE?", function(req, res) {
-    var id = req.params.CODE;
-    console.log(JSON.stringify(req.params));
-    console.log("CODE is " + id);
+app.get("/barcode/:CODE", function(req, res) {
+    var id = req.body.CODE;
 
-    res.render("index", { CODE: id } );
+    res.render("index", { CODE: id } );	
+});
+
+app.get("/barcode", function(req, res) {
+    var id = req.query.q;
+
+    res.render("index", { CODE: id } );	
 });
 
 //Show static files like css, knockout scripts, images, ...
 app.use(express.static(__dirname, "/public"));
 
 var server = http.createServer(app);
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+server.listen(3000, function() {console.log('listening on port 3000...');});

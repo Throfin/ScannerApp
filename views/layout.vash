@@ -1,14 +1,13 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Scanner Test</title>
-		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/public/css/site.css">
+		<title>Story Points</title>
+		<link rel="stylesheet" type="text/css" href="/public/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/public/dist/css/site.css">
 		@html.block("styles")
 	</head>
 	<body>
 		<div  id="content" class="container-fluid">@html.block("body")</div>
 	</body>
-	<script src="/public/js/angular.js"></script>
 	@html.block("scripts")
 </html>

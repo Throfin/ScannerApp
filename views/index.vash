@@ -1,17 +1,18 @@
 @html.extend('layout', function(model) {
 	@html.block("scripts", function(model) {
-		<script src="/public/js/test.js"></script>
+		<script src="/public/test.js"></script>
 	})
-	@html.block("body", function (model) {	
-        <div ng-app="testApp">
+	@html.block("body", function (model) {
+		<div  id="content" class="container-fluid"><div ng-app="testApp">
             <div ng-controller="barcode">
                 {{ "Iteration " + testvar }}
                 <hr>
                 <a href="/">HOME</a><br />
-		        <a href="/barcode/12345678">Test Link without pic2shop</a><br />
-                <a href="pic2shop://scan?callback=/barcode/%3FCODE%3DEAN">pic2shop</a>
+		        <a href="/barcode/12345678">Test Link with query</a><br />
+		        <a href="/barcode?q=12345678">Test Link without pic2shop</a><br />
+                <a href="pic2shop://scan?callback=https%3A%2F%2Fsalty-falls-1710.herokuapp.com%2Fbarcode%3Fq%3DEAN">pic2shop</a>
                 <hr>
-                <span>@model.CODE</span>
+                <span></span>
             </div>
 		</div>
 	})
