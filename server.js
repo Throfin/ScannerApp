@@ -34,4 +34,4 @@ app.get("/barcode", function(req, res) {
 app.use(express.static(__dirname, "/public"));
 
 var server = http.createServer(app);
-server.listen(3000, function() {console.log('listening on port 3000...');});
+server.listen(process.env.port, function() {console.log('listening on port ' + process.env.port);});
