@@ -30,10 +30,8 @@ app.get("/barcode", function(req, res) {
     res.render("index", { CODE: id } );	
 });
 
-process.env.port = 3000;
-
 //Show static files like css, knockout scripts, images, ...
 app.use(express.static(__dirname, "/public"));
 
 var server = http.createServer(app);
-server.listen(process.env.port, function() {console.log('listening on port ' + process.env.port);});
+server.listen(process.env.PORT || 5000);
