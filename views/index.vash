@@ -7,8 +7,10 @@
 		<div id="content" class="container-fluid">
             <div ng-app="testApp">
                 <div ng-controller="barcode">
-                    {{ "Iteration " + testvar }}<br />
-                    @model.CODE
+                    {{ "Iteration " + testvar }} {{ barcode }}<br />
+                    @model.CODE<br />
+                    <input type="text" ng-model="barcode">@model.CODE</input>
+                    
                     <hr>
                     <a href="/">HOME</a><br />
 		            <a href="/barcode/12345678">Test Link with query</a><br />
