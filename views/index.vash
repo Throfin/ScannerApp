@@ -9,7 +9,7 @@
                 <div ng-controller="barcode">
                     {{ "Iteration " + testvar }} {{ barcode }}<br />
                     @model.CODE<br />
-                    <input type="text" ng-model="barcode">@model.CODE</input>
+                    <input type="text" ng-model="barcode" value=@model.CODE></input>
                     
                     <hr>
                     <a href="/">HOME</a><br />
