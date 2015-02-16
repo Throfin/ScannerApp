@@ -7,7 +7,7 @@
 		<div id="content" class="container-fluid">
             <div ng-app="testApp">
                 <div ng-controller="barcode", ng-init="barcode= @model.CODE">
-                    <h3>Press scan to scan a barcode</h3>
+                    <h3>Press "Scan" to scan a barcode</h3>
                     <br />
                     <a href="pic2shop://scan?callback=https%3A%2F%2Fsalty-falls-1710.herokuapp.com%2Fbarcode%3Fq%3DEAN" class="btn btn-primary" role="button">Scan</a>
                     <input type="text" ng-model="barcode"></input>
